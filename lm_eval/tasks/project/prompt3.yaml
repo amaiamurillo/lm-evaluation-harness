@@ -1,0 +1,16 @@
+group: prompts
+task: prompt3
+dataset_path: orai-nlp/basqueGLUE
+dataset_name: bec
+output_type: multiple_choice
+validation_split: validation
+test_split: test
+doc_to_text: "Testua: {{text}}\nGaldera: Zein da aurreko testuaren tonua: negatiboa, neutrala ala positiboa?\nErantzuna:"
+doc_to_target: label
+doc_to_choice: ['negatiboa', 'neutrala', 'positiboa']
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  - version: 1.0
